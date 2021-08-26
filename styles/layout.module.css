@@ -1,0 +1,46 @@
+.container {
+	background-color: #f3f6fa;
+	height: 100vh;
+}
+.header {
+	font-size: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+}
+.rightBox {
+	background-color: #2f3544;
+	float: right;
+	width: 228px;
+	height: 448px;
+}
+.leftBox {
+	background-color: #ffffff;
+}
+.amount {
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-radius: 4px;
+	background-color: #3b414e;
+	border: solid 1px #3b414e;
+	margin: 14px 12px;
+}
+.type {
+	padding-left: 8px;
+}
+.number {
+	padding-right: 8px;
+}
+.numberSign {
+	font-size: 20%;
+}
