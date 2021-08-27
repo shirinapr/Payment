@@ -3,11 +3,12 @@
 	height: 100vh;
 }
 .header {
-	font-size: 20px;
+	font-size: 14px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
 }
 .box {
 	position: absolute;
@@ -16,31 +17,75 @@
 	transform: translate(-50%, -50%);
 	display: flex;
 }
-.rightBox {
+.leftBox {
 	background-color: #2f3544;
 	float: right;
 	width: 228px;
 	height: 448px;
+	border-radius: 4px 0 0 4px;
+	border: solid 1px #2f3544;
 }
-.leftBox {
+.rightBox {
 	background-color: #ffffff;
+	width: 336px;
+	height: 448px;
+	border-radius: 0 4px 4px 0;
+	border: solid 1px #ebedf1;
 }
 .amount {
+	height: 72px;
 	color: white;
+	align-items: center;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	border-radius: 4px;
 	background-color: #3b414e;
 	border: solid 1px #3b414e;
-	margin: 14px 12px;
+	margin: 14px 12px 30px 12px;
 }
+
 .type {
 	padding-left: 8px;
 }
 .number {
+	font-size: 22px;
 	padding-right: 8px;
+	font-family: googleSans;
 }
 .numberSign {
-	font-size: 20%;
+	padding-left: 70px;
+	font-size: 14px;
+}
+.img {
+	height: 25px;
+	width: 70px;
+	margin: 31px 60px 0px 38px;
+}
+.choose {
+	color: #2e3239;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 31px 60px 24px 42px;
+}
+.select {
+	width: 107px;
+	height: 30px;
+	border: 1px solid white;
+	border-radius: 4px;
+	background-color: #fff;
+	color: #2e3239;
+}
+.select::after {
+	border: 1px solid white;
+	background-color: #fff;
+}
+.support {
+	margin: 7px 406px 5px 0;
+	color: #2e3239;
+}
+.timerwrapper {
+	color: #2e3239;
+	font-size: 12px;
+	display: flex;
 }

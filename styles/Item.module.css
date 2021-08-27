@@ -1,17 +1,18 @@
 .label,
 .input {
-	margin-left: 8px;
+	margin-left: 14px;
 }
 .label {
 	color: #858fa7;
-	font-size: 12px;
 	display: flex;
+	font-size: 12px;
 }
 
 .input {
 	font-size: 12px;
 	color: #ffffff;
 	background-color: #2f3544;
+	font-family: googleSans;
 }
 .line {
 	height: 1px;
@@ -20,4 +21,11 @@
 }
 .icon {
 	margin-right: 4px;
+	font-size: 14px;
+}
+.copy {
+	padding-top: 6px;
+	font-size: 150%;
+	padding-left: 5px;
+	color: #858fa7;
 }
