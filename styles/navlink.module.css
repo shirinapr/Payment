@@ -1,22 +1,30 @@
 .container {
-	margin: 25px 42px 20px 42px;
+	margin: 20px 42px 0px 42px;
 }
 .linkContainer {
 	display: flex;
-	/* justify-content: space-between; */
 	border: 1px solid #e5e5e5;
 	border-radius: 4px;
 	align-items: center;
 	padding: 5px;
 }
+.linkContainer:hover {
+	border: 1px solid #383838;
+	color: #383838;
+}
 .icon {
+	margin-left: 12px;
 	height: 24px;
 	width: 24px;
 }
 .value {
-	padding-left: 14px;
+	font-size: 14px;
+	padding-left: 8px;
 	color: #2e3239;
 }
 .forward {
-	background-color: red;
+	background-color: GRAY;
+	margin-left: 100px;
+	color: #e5e5e5;
+	font-size: 12px;
 }

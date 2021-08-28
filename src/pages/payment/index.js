@@ -3,34 +3,47 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import Navlink from '../../components/Navlink';
 
-import styles from '../../../styles/layout.module.css';
+import styles from '../../../styles/payment.module.css';
 
 import Countdown from 'react-countdown';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
-import { IoChevronBackOutline } from 'react-icons/io';
+import { BsChevronLeft } from 'react-icons/bs';
 
 const Payment = () => {
+	const renderer = ({ minutes, seconds }) => (
+		<span>
+			{minutes} : {seconds}{' '}
+		</span>
+	);
 	return (
 		<>
 			<Layout>
 				<div>
 					<div className={styles.rightBox}>
-						<div className={styles.header}>
+						<div className={styles.head}>
 							<img
 								src='https://s4.uupload.ir/files/geepay_oq4.png'
 								alt='GeePay'
 								className={styles.img}
 							/>
-							<CountdownCircleTimer
-								isPlaying
-								duration={60}
-								colors={[['#979797']]}
-								size={[[30]]}
-								strokeWidth={[[3]]}
-								onComplete={() => [true, 1000]}
-							/>
-							<Countdown date={Date.now() + 1000 * 60 * 15} />
+							<div className={styles.count}>
+								<CountdownCircleTimer
+									isPlaying
+									duration={9000}
+									colors={[['#e5e5e5']]}
+									trailColor={[['#979797']]}
+									size={[[18]]}
+									strokeWidth={[[2]]}
+									onComplete={() => [true, 1000]}
+								/>
+							</div>
+							<div className={styles.counter}>
+								<Countdown
+									date={Date.now() + 1000 * 60 * 15}
+									renderer={renderer}
+								/>
+							</div>
 						</div>
 
 						<form>
@@ -52,10 +65,10 @@ const Payment = () => {
 								value='Stellar'
 							/>
 						</form>
-						<p>
-							<IoChevronBackOutline />
-							Back
-						</p>
+						<div className={styles.footer}>
+							<BsChevronLeft className={styles.backIcon} />
+							<p className={styles.back}>Back</p>
+						</div>
 					</div>
 				</div>
 			</Layout>

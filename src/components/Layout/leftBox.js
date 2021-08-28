@@ -5,7 +5,7 @@ import Item from '../Item';
 import { BiReceipt, BiCreditCard } from 'react-icons/bi';
 import { IoIosGlobe } from 'react-icons/io';
 import { RiCalendarEventLine } from 'react-icons/ri';
-import styles from '../../../styles/layout.module.css';
+import styles from '../../../styles/leftBox.module.css';
 
 const LeftBox = () => {
 	return (

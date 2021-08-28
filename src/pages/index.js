@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import Payment from './Payment';
+import Payment from './payment';
 
 export default function Home() {
 	return (

@@ -1,0 +1,33 @@
+.leftBox {
+	background-color: #2f3544;
+	float: right;
+	width: 228px;
+	height: 448px;
+	border-radius: 4px 0 0 4px;
+	border: solid 1px #2f3544;
+}
+.amount {
+	height: 72px;
+	color: white;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-radius: 4px;
+	background-color: #3b414e;
+	border: solid 1px #3b414e;
+	margin: 14px 12px 30px 12px;
+}
+
+.type {
+	padding-left: 8px;
+}
+.number {
+	font-size: 22px;
+	padding-right: 8px;
+	font-family: googleSans;
+}
+.numberSign {
+	padding-left: 70px;
+	font-size: 14px;
+}
