@@ -2,6 +2,7 @@
 	margin: 20px 42px 0px 42px;
 }
 .linkContainer {
+	position: relative;
 	display: flex;
 	border: 1px solid #e5e5e5;
 	border-radius: 4px;
@@ -23,8 +24,10 @@
 	color: #2e3239;
 }
 .forward {
-	background-color: GRAY;
+	position: absolute;
+	top: 10px;
+	right: 13px;
 	margin-left: 100px;
-	color: #e5e5e5;
+	color: #dddddd;
 	font-size: 12px;
 }
