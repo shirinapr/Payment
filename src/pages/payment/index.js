@@ -12,6 +12,11 @@ import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
 import { BsChevronLeft } from 'react-icons/bs';
 
+import binance from '../../assets/coins/binance.png';
+import ether from '../../assets/coins/etheri.png';
+import bitcoin from '../../assets/coins/bitcoin.png';
+import stellar from '../../assets/coins/stellar.png';
+
 const Payment = () => {
 	const renderer = ({ minutes, seconds }) => (
 		<span>
@@ -35,7 +40,7 @@ const Payment = () => {
 						<div className={styles.count}>
 							<CountdownCircleTimer
 								isPlaying
-								duration={120}
+								duration={15 * 60}
 								colors={[['#e5e5e5']]}
 								trailColor={[['#979797']]}
 								size={[[18]]}
@@ -53,22 +58,10 @@ const Payment = () => {
 
 					<form>
 						<p className={styles.choose}>Choose a currency</p>
-						<Navlink
-							icon='https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/128/Bitcoin-BTC-icon.png'
-							value='Bitcoin'
-						/>
-						<Navlink
-							icon='https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/128/Ethereum-ETH-icon.png'
-							value='Ethereum'
-						/>
-						<Navlink
-							icon='https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/128/Binance-Coin-BNB-icon.png'
-							value='Binance'
-						/>
-						<Navlink
-							icon='https://s2.coinmarketcap.com/static/img/coins/200x200/512.png'
-							value='Stellar'
-						/>
+						<Navlink icon={bitcoin} value='Bitcoin' />
+						<Navlink icon={ether} value='Ethereum' />
+						<Navlink icon={binance} value='Binance' />
+						<Navlink icon={stellar} value='Stellar' />
 					</form>
 					<Link href='#'>
 						<a onClick={aclick}>

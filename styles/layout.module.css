@@ -26,6 +26,14 @@
 	border: 1px solid white;
 	background-color: #fff;
 }
+.selectOpt {
+	display: flex;
+}
+.selectOpt img {
+	padding-bottom: 8px;
+	width: 20px;
+	height: 22px;
+}
 .box {
 	display: flex;
 }
