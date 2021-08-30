@@ -1,45 +1,13 @@
 .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
 	background-color: #f3f6fa;
 	height: 100vh;
 }
 .header {
 	font-size: 14px;
 	display: flex;
-	margin-bottom: 60px;
+	margin-bottom: 81px;
 }
 .support {
-	margin: 7px 420px 5px 0;
+	margin: 7px 410px 5px 0;
 	color: #2e3239;
-}
-.select {
-	padding: 8px 7px 7px;
-	border: 1px solid white;
-	border-radius: 4px;
-	background-color: #fff;
-	color: #2e3239;
-}
-.select::after {
-	border: 1px solid white;
-	background-color: #fff;
-}
-.selectOpt {
-	display: flex;
-}
-.selectOpt img {
-	padding-bottom: 8px;
-	width: 20px;
-	height: 22px;
-}
-.box {
-	display: flex;
-}
-
-.timerwrapper {
-	color: #2e3239;
-	font-size: 12px;
-	display: flex;
 }

@@ -1,7 +1,6 @@
 .leftBox {
 	background-color: #2f3544;
-	float: right;
-	width: 228px;
+	/* width: 228px; */
 	height: 448px;
 	border-radius: 4px 0 0 4px;
 	border: solid 1px #2f3544;
@@ -20,6 +19,7 @@
 }
 
 .type {
+	padding-top: 17px;
 	padding-left: 8px;
 }
 .number {

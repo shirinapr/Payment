@@ -3,9 +3,10 @@ import styles from '../../../styles/layout.module.css';
 import Select from 'react-select';
 import LeftBox from './leftBox';
 
+import cn from 'classnames';
 import Image from 'next/image';
-import uk from '../../assets/flags/ukFlag.png';
-import triangle from '../../assets/icons/triangle.png';
+import uk from '../../assets/flags/ukFlag.svg';
+import triangle from '../../assets/icons/triangle.svg';
 import china from '../../assets/flags/chinaFlag.png';
 
 const Layout = ({ children }) => {
@@ -13,7 +14,6 @@ const Layout = ({ children }) => {
 		menu: () => ({
 			width: 107,
 			height: 30,
-			backgroundColor: 'blue',
 		}),
 		control: (base) => ({
 			...base,
@@ -22,7 +22,6 @@ const Layout = ({ children }) => {
 		}),
 		options: () => ({
 			width: 107,
-			backgroundColor: 'red',
 		}),
 		indicatorSeparator: () => {},
 		dropdownIndicator: () => ({
@@ -34,7 +33,8 @@ const Layout = ({ children }) => {
 			value: 'english',
 			label: (
 				<div className={styles.selectOpt}>
-					<Image src={uk} /> English
+					<Image src={uk} width={20} height={13} />
+					<span>English</span>
 					<Image src={triangle} />
 				</div>
 			),
@@ -50,19 +50,28 @@ const Layout = ({ children }) => {
 	];
 
 	return (
-		<div className='container'>
-			<div className='row justify-content-center'>
-				<div className='col-12 col-md-10'>
-					<div className={styles.container}>
+		<div className={cn(styles.container, 'container-fluid p-0')}>
+			<div className='row'>
+				<div
+					className={cn(
+						'justify-content-center',
+						'd-flex',
+						'align-items-center'
+					)}
+				>
+					<div>
 						<div className={styles.header}>
 							<p className={styles.support}>Support</p>
 							<Select
+								menuPosition='fixed'
+								menuPlacement='bottom'
+								isSearchable={false}
 								options={options}
 								styles={customStyles}
 								defaultValue={options[0]}
 							/>
 						</div>
-						<div className={styles.box}>
+						<div className={cn('row', styles.box)}>
 							<LeftBox />
 							{children}
 						</div>
@@ -72,7 +81,5 @@ const Layout = ({ children }) => {
 		</div>
 	);
 };
-{
-	/* <option data-content="<img src='http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2833.png'/>"> */
-}
+
 export default Layout;

@@ -1,28 +1,29 @@
 .rightBox {
 	background-color: #ffffff;
-	width: 336px;
+	/* width: 336px; */
 	height: 448px;
 	border-radius: 0 4px 4px 0;
 	border: solid 1px #ebedf1;
 }
+.countdownRenderer {
+	background-color: red;
+}
 .head {
+	height: 19px;
 	margin: 31px 41px 0px 38px;
 	display: flex;
 	justify-content: space-between;
 }
 .count {
-	margin: 2px 4px 0 115px;
+	margin: -2px 4px 0px 115px;
 }
 .counter {
-	width: auto;
+	background-color: red;
+	/* width: auto; */
 	margin-top: 2px;
 	font-family: googleSans;
 	color: #2e3239;
 	font-size: 12px;
-}
-.img {
-	height: 25px;
-	width: 70px;
 }
 .choose {
 	color: #2e3239;
@@ -32,11 +33,13 @@
 }
 .footer {
 	display: flex;
+
 	color: #a8a8a8;
 	font-size: 12px;
 	margin: 70px 0 0 41px;
 }
 .back {
+	text-decoration: none;
 	font-family: googleSans;
 	margin-top: -3px;
 }

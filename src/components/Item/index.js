@@ -1,11 +1,14 @@
 import { React, useState } from 'react';
 import styles from '../../../styles/Item.module.css';
+import Image from 'next/image';
 
-import { IoMdCopy } from 'react-icons/io';
 import { BiCheck } from 'react-icons/bi';
 import copy from 'copy-to-clipboard';
 
+import copyLogo from '../../assets/icons/copy.svg';
+
 import cn from 'classnames';
+
 const Item = ({ icon, label, value, hasLine, hasCopy }) => {
 	const [isClicked, setIsClicked] = useState(false);
 	const copyIt = () => {
@@ -15,8 +18,9 @@ const Item = ({ icon, label, value, hasLine, hasCopy }) => {
 			setIsClicked(false);
 		}, 1000);
 	};
+	// cn('row justify-content-center');
 	return (
-		<div className={cn(styles.Item, 'row justify-content-center')}>
+		<div className={styles.Item}>
 			<div className={styles.label}>
 				<div className={styles.icon}> {icon}</div>
 				{label}
@@ -24,16 +28,17 @@ const Item = ({ icon, label, value, hasLine, hasCopy }) => {
 			<p className={styles.input}>
 				{value}
 				{hasCopy ? (
-					<>
+					<span>
 						{isClicked ? (
-							<BiCheck className={styles.copy} />
+							<div className={styles.copy}>
+								<BiCheck />
+							</div>
 						) : (
-							<IoMdCopy
-								className={styles.copy}
-								onClick={copyIt}
-							/>
+							<div className={styles.copy}>
+								<Image src={copyLogo} onClick={copyIt} />
+							</div>
 						)}
-					</>
+					</span>
 				) : (
 					' '
 				)}
