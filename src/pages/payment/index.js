@@ -33,27 +33,36 @@ const Payment = () => {
 	};
 	return (
 		<Layout>
-			<div className={cn(styles.rightBox, 'col-7')}>
-				<div className={styles.head}>
-					<Image src={geepay} alt='GeePay' width={70} />
-					<div className={styles.count}>
-						<CountdownCircleTimer
-							isPlaying
-							duration={15 * 60}
-							colors={[['#e5e5e5']]}
-							trailColor={[['#979797']]}
-							size={[[18]]}
-							strokeWidth={[[2]]}
-							onComplete={() => [true, 1000]}
-						/>
+			<div className={cn(styles.rightBox, 'col-md-7')}>
+				<div className={cn(styles.head, 'row')}>
+					<div className={cn('col-5')}>
+						<Image src={geepay} alt='GeePay' width={70} />
 					</div>
-					<div className={styles.counter}>
-						<CountdownTimer
-							count={100}
-							hideDay
-							hideHours
-							// noPoints
-						/>
+					<div className='col-7'>
+						<div className='row'>
+							<div className={cn(styles.count, 'col-4')}>
+								<CountdownCircleTimer
+									isPlaying
+									duration={15 * 60}
+									colors={[['#e5e5e5']]}
+									trailColor={[['#979797']]}
+									size={[[18]]}
+									strokeWidth={[[2]]}
+									onComplete={() => [true, 1000]}
+								/>
+							</div>
+
+							<div className='col-8'>
+								<div className={styles.counter}>
+									<CountdownTimer
+										count={15 * 60}
+										hideDay
+										hideHours
+										// noPoints
+									/>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div>

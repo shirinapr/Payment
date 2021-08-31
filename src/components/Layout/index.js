@@ -8,6 +8,7 @@ import Image from 'next/image';
 import uk from '../../assets/flags/ukFlag.svg';
 import triangle from '../../assets/icons/triangle.svg';
 import china from '../../assets/flags/chinaFlag.png';
+import Link from 'next/link';
 
 const Layout = ({ children }) => {
 	const customStyles = {
@@ -48,36 +49,39 @@ const Layout = ({ children }) => {
 			),
 		},
 	];
-
+	// 'container-fluid p-0'
 	return (
-		<div className={cn(styles.container, 'container-fluid p-0')}>
-			<div className='row'>
-				<div
-					className={cn(
-						'justify-content-center',
-						'd-flex',
-						'align-items-center'
-					)}
-				>
-					<div>
-						<div className={styles.header}>
-							<p className={styles.support}>Support</p>
-							<Select
-								menuPosition='fixed'
-								menuPlacement='bottom'
-								isSearchable={false}
-								options={options}
-								styles={customStyles}
-								defaultValue={options[0]}
-							/>
-						</div>
-						<div className={cn('row', styles.box)}>
-							<LeftBox />
-							{children}
-						</div>
+		<div className={cn(styles.container)}>
+			{/* <div className='row'> */}
+			<div
+				className={cn(
+					'justify-content-center',
+					'd-flex'
+					// 'align-items-center'
+				)}
+			>
+				<div>
+					<div className={styles.header}>
+						<Link href='#'>
+							<a className={styles.support}>Support</a>
+						</Link>
+
+						<Select
+							menuPosition='fixed'
+							menuPlacement='bottom'
+							isSearchable={false}
+							options={options}
+							styles={customStyles}
+							defaultValue={options[0]}
+						/>
+					</div>
+					<div className={cn('row', styles.box)}>
+						<LeftBox />
+						{children}
 					</div>
 				</div>
 			</div>
+			{/* </div> */}
 		</div>
 	);
 };

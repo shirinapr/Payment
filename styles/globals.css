@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: Circular, googleSans;
+	background-color: #f3f6fa;
 }
 @font-face {
 	font-family: Circular;

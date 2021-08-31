@@ -3,6 +3,8 @@
 	margin-left: 14px;
 }
 .label {
+	font-family: Circular;
+	/* margin-bottom: 14px; */
 	color: #858fa7;
 	display: flex;
 	font-size: 12px;

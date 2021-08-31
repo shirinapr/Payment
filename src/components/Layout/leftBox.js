@@ -13,7 +13,7 @@ import website from '../../assets/icons/website.svg';
 const LeftBox = () => {
 	return (
 		// <div className='col col-md-6'>
-		<div className={cn(styles.leftBox, 'col-5')}>
+		<div className={cn(styles.leftBox, 'col-md-5')}>
 			<div className={styles.amount}>
 				<p className={styles.type}>Amount</p>
 				<span className={styles.numberSign}>$</span>
