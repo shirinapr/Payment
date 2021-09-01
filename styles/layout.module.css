@@ -2,13 +2,58 @@
 	background-color: #f3f6fa;
 	height: 100vh;
 }
-.header {
-	font-size: 14px;
-	display: flex;
-	margin-bottom: 81px;
-}
+
 .support {
 	text-decoration: none;
-	margin: 7px 417px 5px 0;
 	color: #2e3239;
+}
+.support:hover {
+	color: #2f3544;
+}
+.headerRow {
+	font-size: 14px;
+	margin: 115px 25px -150px -28px;
+}
+.boxes {
+	height: 470px;
+}
+.leftBox {
+	background-color: #2f3544;
+	border-radius: 4px 0 0 4px;
+	border: solid 1px #2f3544;
+}
+.rightBox {
+	background-color: #ffffff;
+	border-radius: 0 4px 4px 0;
+	border: solid 1px #ebedf1;
+}
+.label {
+	margin-left: 8px;
+	margin-right: 18px;
+}
+@media only screen and (max-width: 580px) {
+	.headerRow {
+		margin: 5px 60px 5px -4px;
+	}
+	.leftBox {
+		border-radius: 4px 4px 0 0;
+	}
+	.rightBox {
+		border-radius: 0 0 4px 4px;
+	}
+}
+@media only screen and (max-width: 1700px) and (min-width: 1200px) {
+	.headerRow {
+		margin-right: 60px;
+	}
+}
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+	.headerRow {
+		margin-right: 40px;
+	}
+}
+@media only screen and (max-width: 930px) and (min-width: 770px) {
+	.headerRow {
+		margin-right: 35px;
+	}
 }

@@ -1,6 +1,7 @@
 .container {
 	font-family: Circular;
 	margin: 20px 42px 0px 42px;
+	cursor: pointer;
 }
 .linkContainer {
 	position: relative;
@@ -11,8 +12,9 @@
 	padding: 8px 12px 7px;
 }
 .linkContainer:hover {
-	border: 1px solid #383838;
-	color: #383838;
+	transition: border 500ms;
+	border: 1px solid #707070;
+	color: #707070;
 }
 
 .value {
@@ -23,8 +25,12 @@
 }
 .forward {
 	position: absolute;
-	top: 8px;
+	top: 12px;
 	right: 12px;
 	color: #dddddd;
 	font-size: 12px;
+}
+.linkContainer:hover .forward {
+	transition: color 500ms;
+	color: #707070;
 }

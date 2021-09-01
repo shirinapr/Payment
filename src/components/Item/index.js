@@ -7,8 +7,6 @@ import copy from 'copy-to-clipboard';
 
 import copyLogo from '../../assets/icons/copy.svg';
 
-import cn from 'classnames';
-
 const Item = ({ icon, label, value, hasLine, hasCopy }) => {
 	const [isClicked, setIsClicked] = useState(false);
 	const copyIt = () => {
@@ -18,33 +16,30 @@ const Item = ({ icon, label, value, hasLine, hasCopy }) => {
 			setIsClicked(false);
 		}, 1000);
 	};
-	// cn('row justify-content-center');
 	return (
 		<div className={styles.Item}>
 			<div className={styles.label}>
 				<div className={styles.icon}> {icon}</div>
 				{label}
 			</div>
-			<p className={styles.input}>
-				{value}
-				{hasCopy ? (
-					<span>
-						{isClicked ? (
-							<div className={styles.copy}>
+			<div>
+				<p className={styles.input}>
+					{value}{' '}
+					{hasCopy ? (
+						<span className={styles.span}>
+							{isClicked ? (
 								<BiCheck />
-							</div>
-						) : (
-							<div className={styles.copy}>
+							) : (
 								<Image src={copyLogo} onClick={copyIt} />
-							</div>
-						)}
-					</span>
-				) : (
-					' '
-				)}
-			</p>
+							)}
+						</span>
+					) : (
+						''
+					)}
+				</p>
+			</div>
 
-			{hasLine ? <div className={styles.line} /> : ' '}
+			{hasLine ? <div className={styles.line} /> : ''}
 		</div>
 	);
 };

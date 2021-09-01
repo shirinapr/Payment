@@ -1,6 +1,5 @@
-import '../../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-component-countdown-timer/lib/styles.css';
+import '../../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
 	return <Component {...pageProps} />;

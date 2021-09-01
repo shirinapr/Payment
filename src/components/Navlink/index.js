@@ -10,14 +10,9 @@ const Navlink = ({ icon, value }) => {
 			<Link href='/#'>
 				<>
 					<div className={styles.linkContainer}>
-						<Image
-							className={styles.icon}
-							src={icon}
-							width={17}
-							height={17}
-						/>
-						<a className={styles.value}>{value}</a>
+						<Image className={styles.icon} src={icon} width={17} height={17} />
 						<BsChevronRight className={styles.forward} />
+						<a className={styles.value}>{value}</a>
 					</div>
 				</>
 			</Link>

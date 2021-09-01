@@ -1,26 +1,26 @@
-.leftBox {
+/* .leftBox {
 	background-color: #2f3544;
-	/* width: 228px; */
 	height: 448px;
 	border-radius: 4px 0 0 4px;
 	border: solid 1px #2f3544;
-}
+} */
 .amount {
 	height: 72px;
 	color: white;
-	align-items: center;
 	display: flex;
+	align-items: center;
 	flex-direction: row;
 	justify-content: space-between;
 	border-radius: 4px;
 	background-color: #3b414e;
 	border: solid 1px #3b414e;
-	margin: 14px 12px 30px 12px;
+	margin: 20px 2px 25px 2px;
+	padding: 25px 12px;
 }
 
 .type {
-	padding-top: 17px;
-	padding-left: 8px;
+	margin: 0px !important;
+	color: white;
 }
 .number {
 	font-size: 22px;
@@ -28,6 +28,10 @@
 	font-family: googleSans;
 }
 .numberSign {
-	padding-left: 70px;
+	margin-top: 5px;
+	margin-right: 5px;
 	font-size: 14px;
+}
+.numberContainer {
+	display: flex;
 }

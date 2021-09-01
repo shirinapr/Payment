@@ -1,87 +1,54 @@
 import React from 'react';
-import styles from '../../../styles/layout.module.css';
-import Select from 'react-select';
-import LeftBox from './leftBox';
-
-import cn from 'classnames';
-import Image from 'next/image';
-import uk from '../../assets/flags/ukFlag.svg';
-import triangle from '../../assets/icons/triangle.svg';
-import china from '../../assets/flags/chinaFlag.png';
 import Link from 'next/link';
+import styles from '../../../styles/layout.module.css';
+import Select from '../Select';
+import LeftBox from './leftBox';
+import cn from 'classnames';
 
 const Layout = ({ children }) => {
-	const customStyles = {
-		menu: () => ({
-			width: 107,
-			height: 30,
-		}),
-		control: (base) => ({
-			...base,
-			width: 107,
-			backgroundColor: 'white',
-		}),
-		options: () => ({
-			width: 107,
-		}),
-		indicatorSeparator: () => {},
-		dropdownIndicator: () => ({
-			display: 'none',
-		}),
-	};
-	const options = [
-		{
-			value: 'english',
-			label: (
-				<div className={styles.selectOpt}>
-					<Image src={uk} width={20} height={13} />
-					<span>English</span>
-					<Image src={triangle} />
-				</div>
-			),
-		},
-		{
-			value: 'chinese',
-			label: (
-				<div className={styles.selectOpt}>
-					<Image src={china} /> chinese
-				</div>
-			),
-		},
-	];
-	// 'container-fluid p-0'
 	return (
-		<div className={cn(styles.container)}>
-			{/* <div className='row'> */}
-			<div
-				className={cn(
-					'justify-content-center',
-					'd-flex'
-					// 'align-items-center'
-				)}
-			>
-				<div>
-					<div className={styles.header}>
-						<Link href='#'>
-							<a className={styles.support}>Support</a>
-						</Link>
-
-						<Select
-							menuPosition='fixed'
-							menuPlacement='bottom'
-							isSearchable={false}
-							options={options}
-							styles={customStyles}
-							defaultValue={options[0]}
-						/>
-					</div>
-					<div className={cn('row', styles.box)}>
-						<LeftBox />
-						{children}
+		<div className='container-fluid '>
+			<div className='d-flex justify-content-center'>
+				<div className='col-xl-4 col-lg-6 col-md-8 col-sm-10 col-12'>
+					<div
+						className={cn(
+							'row justify-content-between align-items-center',
+							styles.headerRow
+						)}
+					>
+						<div className='col-2'>
+							<Link href='#'>
+								<a className={styles.support}>Support</a>
+							</Link>
+						</div>
+						<div className='col-2'>
+							<Select />
+						</div>
 					</div>
 				</div>
 			</div>
-			{/* </div> */}
+			<div className='d-flex flex-column min-vh-100 justify-content-start justify-content-lg-center justify-content-md-center justify-content-xl-center justify-content-sm-center align-items-center '>
+				<div className='col-xl-4 col-lg-6 col-md-8 col-sm-10 col-12'>
+					<div className={cn('row justify-content-center', styles.boxes)}>
+						<div
+							className={cn(
+								styles.leftBox,
+								'col-xl-5 col-lg-5 col-md-5 col-sm-5 col-11 order-1'
+							)}
+						>
+							<LeftBox />
+						</div>
+						<div
+							className={cn(
+								styles.rightBox,
+								'col-xl-7 col-lg-7 col-md-7 col-sm-7 col-11 order-2'
+							)}
+						>
+							{children}
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };

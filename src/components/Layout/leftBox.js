@@ -12,12 +12,13 @@ import website from '../../assets/icons/website.svg';
 
 const LeftBox = () => {
 	return (
-		// <div className='col col-md-6'>
-		<div className={cn(styles.leftBox, 'col-md-5')}>
+		<div className={styles.leftBox}>
 			<div className={styles.amount}>
 				<p className={styles.type}>Amount</p>
-				<span className={styles.numberSign}>$</span>
-				<span className={styles.number}>125</span>
+				<div className={styles.numberContainer}>
+					<span className={styles.numberSign}>$</span>
+					<span className={styles.number}>125</span>
+				</div>
 			</div>
 			<Item
 				hasLine
@@ -39,13 +40,8 @@ const LeftBox = () => {
 				label='Website:'
 				value='www.geepay.io'
 			/>
-			<Item
-				icon={<Image src={date} />}
-				label='Date'
-				value='April 3, 2019'
-			/>
+			<Item icon={<Image src={date} />} label='Date' value='April 3, 2019' />
 		</div>
-		// </div>
 	);
 };
 
