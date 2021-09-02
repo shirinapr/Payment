@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Item from '../Item';
 
-import styles from '../../../styles/leftBox.module.css';
+import styles from '../../styles/leftBox.module.css';
 import cn from 'classnames';
 
 import check from '../../assets/icons/check.svg';

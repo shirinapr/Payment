@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../../../styles/layout.module.css';
+import styles from '../../styles/layout.module.css';
 import Select from '../Select';
 import LeftBox from './leftBox';
 import cn from 'classnames';
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
 					</div>
 				</div>
 			</div>
-			<div className='d-flex flex-column min-vh-100 justify-content-start justify-content-lg-center justify-content-md-center justify-content-xl-center justify-content-sm-center align-items-center '>
+			<div className='d-flex flex-column vh-100 justify-content-start justify-content-lg-center justify-content-md-center justify-content-xl-center justify-content-sm-center align-items-center '>
 				<div className='col-xl-4 col-lg-6 col-md-8 col-sm-10 col-12'>
 					<div className={cn('row justify-content-center', styles.boxes)}>
 						<div

@@ -9,7 +9,7 @@ import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
 import Layout from '../../components/Layout';
 import Navlink from '../../components/Navlink';
-import styles from '../../../styles/rightBox.module.css';
+import styles from '../../styles/rightBox.module.css';
 
 import cn from 'classnames';
 
@@ -63,8 +63,8 @@ const Payment = () => {
 				</div>
 
 				<Link href='#'>
-					<a onClick={aclick}>
-						<div className={styles.footer}>
+					<a onClick={aclick} className={styles.footer}>
+						<div className={styles.backContainer}>
 							<BsChevronLeft className={styles.backIcon} />
 							<p className={styles.back}>Back</p>
 						</div>

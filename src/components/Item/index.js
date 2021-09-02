@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import styles from '../../../styles/Item.module.css';
+import styles from '../../styles/Item.module.css';
 import Image from 'next/image';
 
 import { BiCheck } from 'react-icons/bi';

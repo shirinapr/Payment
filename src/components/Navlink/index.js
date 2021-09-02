@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../../../styles/navlink.module.css';
+import styles from '../../styles/navlink.module.css';
 
 import { BsChevronRight } from 'react-icons/bs';
 

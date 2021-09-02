@@ -8,11 +8,11 @@
 	color: #2e3239;
 }
 .support:hover {
-	color: #2f3544;
+	color: #5a5f69;
 }
 .headerRow {
 	font-size: 14px;
-	margin: 115px 25px -150px -28px;
+	margin: 115px 25px -160px -28px;
 }
 .boxes {
 	height: 470px;
@@ -30,6 +30,26 @@
 .label {
 	margin-left: 8px;
 	margin-right: 18px;
+}
+@media only screen and (max-width: 379px) and (min-width: 280px) {
+	.headerRow {
+		padding-right: 50px;
+	}
+}
+@media only screen and (max-width: 449px) and (min-width: 380px) {
+	.headerRow {
+		padding-right: 40px;
+	}
+}
+@media only screen and (max-width: 530px) and (min-width: 450px) {
+	.headerRow {
+		padding-right: 28px;
+	}
+}
+@media only screen and (max-width: 575px) and (min-width: 535px) {
+	.headerRow {
+		padding-right: 15px;
+	}
 }
 @media only screen and (max-width: 580px) {
 	.headerRow {
@@ -55,5 +75,11 @@
 @media only screen and (max-width: 930px) and (min-width: 770px) {
 	.headerRow {
 		margin-right: 35px;
+	}
+}
+@media screen and (max-height: 800px) {
+	.headerRow {
+		margin-top: 10px;
+		margin-bottom: 10px;
 	}
 }

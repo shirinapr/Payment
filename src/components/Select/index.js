@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import SelectPack from 'react-select';
-import styles from '../../../styles/layout.module.css';
+import styles from '../../styles/layout.module.css';
 
 import uk from '../../assets/flags/ukFlag.svg';
 import triangle from '../../assets/icons/triangle.svg';
@@ -25,6 +25,9 @@ const Select = () => {
 	const customStyles = {
 		menu: () => ({
 			width: 130,
+			backgroundColor: 'white',
+			marginTop: 5,
+			borderRadius: 4,
 		}),
 		control: (base) => ({
 			...base,

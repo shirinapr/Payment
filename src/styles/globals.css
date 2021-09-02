@@ -8,11 +8,11 @@ body {
 }
 @font-face {
 	font-family: Circular;
-	src: url('../font/CircularStd-Book.otf');
+	src: url('../../font/CircularStd-Book.otf');
 }
 @font-face {
 	font-family: googleSans;
-	src: url('../font/GoogleSans-Medium.ttf');
+	src: url('../../font/GoogleSans-Medium.ttf');
 }
 a {
 	color: inherit;
